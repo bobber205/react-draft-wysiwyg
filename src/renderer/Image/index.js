@@ -15,21 +15,21 @@ const getImageComponent = config => class Image extends Component {
     hovered: false,
   };
 
-  handleClick = (e) =>{
-    console.log("e.target handleclick",e.target)
-    const height = e.target.style.height || 'auto';
-    const width = e.target.style.width || 'auto';
-    console.log("e.target width and height", width, height);
-    if(height && width){
-      const { block, contentState } = this.props;
-      const entityKey = block.getEntityAt(0);
-      contentState.mergeEntityData(
-        entityKey,
-        { height, width },
-      );
-      config.onChange(EditorState.push(config.getEditorState(), contentState, 'change-block-data'));
-    }
-  }
+  // handleClick = (e) =>{
+  //   console.log("e.target handleclick",e.target)
+  //   const height = e.target.style.height || 'auto';
+  //   const width = e.target.style.width || 'auto';
+  //   console.log("e.target width and height", width, height);
+  //   if(height && width){
+  //     const { block, contentState } = this.props;
+  //     const entityKey = block.getEntityAt(0);
+  //     contentState.mergeEntityData(
+  //       entityKey,
+  //       { height, width },
+  //     );
+  //     config.onChange(EditorState.push(config.getEditorState(), contentState, 'change-block-data'));
+  //   }
+  // }
 
   setEntityAlignmentLeft: Function = (): void => {
     this.setEntityAlignment('left');
