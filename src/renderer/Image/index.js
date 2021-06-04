@@ -101,6 +101,7 @@ const getImageComponent = config => class Image extends Component {
     const { isReadOnly, isImageAlignmentEnabled } = config;
     const entity = contentState.getEntity(block.getEntityAt(0));
     const { src, alignment, height, width, alt } = entity.getData();
+    console.log("target width/height is", height, width)
     return (
       <span
         onMouseEnter={this.toggleHovered}
