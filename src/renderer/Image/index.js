@@ -16,7 +16,7 @@ const getImageComponent = config => class Image extends Component {
   };
 
   handleClick = (e) =>{
-    console.log("e.target",e.target)
+    console.log("e.target handleclick",e.target)
     const height = e.target.style.height || 'auto';
     const width = e.target.style.width || 'auto';
     console.log("e.target width and height", width, height);
