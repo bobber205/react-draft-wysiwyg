@@ -17,8 +17,9 @@ const getImageComponent = config => class Image extends Component {
 
   handleClick = (e) =>{
     console.log("e.target",e.target)
-    const height = e.target.style.height;
-    const width = e.target.style.width;
+    const height = e.target.style.height || 'auto';
+    const width = e.target.style.width || 'auto';
+    console.log("e.target width and height", width, height);
     if(height && width){
       const { block, contentState } = this.props;
       const entityKey = block.getEntityAt(0);
